@@ -826,6 +826,13 @@
             if (event.key === 'Enter') {
                 checkQuizAnswer();
             }
+            function speakQuizWord() {
+    // 確保目前有正在測驗的單字才發音
+    if (currentQuizWord) {
+        speak(currentQuizWord.word);
+    }
+}
+            
         });
     </script>
 </body>
